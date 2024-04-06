@@ -24,6 +24,7 @@ class AffectedIndividualsCreateView(CreateAPIView): #Post
 class AffectedIndividualsUpdateView(UpdateAPIView): #Patch, Put
     queryset = AffectedIndividual.objects.all()
     serializer_class = AffectedIndividualUpdateAPIView
+    http_method_names = ("name",)
 
 
 class AffectedIndividualsDeleteView(DestroyAPIView): #Delete
